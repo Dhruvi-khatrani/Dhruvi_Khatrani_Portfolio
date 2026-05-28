@@ -36,6 +36,7 @@ export default function RootLayout({
         />
       </head>
       <body
+        suppressHydrationWarning
         className={`${inter.variable} ${jetbrains.variable} min-h-screen font-sans text-[length:var(--text-body-md)] leading-[var(--text-body-md--line-height)] antialiased`}
       >
         {/* CursorGlow is OUTSIDE ThemeProvider so it mounts immediately,

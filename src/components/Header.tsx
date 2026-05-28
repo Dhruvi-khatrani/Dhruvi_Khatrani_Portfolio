@@ -73,7 +73,7 @@ export function Header() {
           {/* Theme toggle — always visible */}
           <ThemeToggle />
 
-          <button
+          {/* <button
             type="button"
             className="hidden cursor-pointer items-center gap-1.5 rounded-lg border border-outline-variant/30 px-3 py-2 font-mono text-xs text-on-surface-variant transition-all hover:border-primary/40 hover:text-primary md:flex"
             title="Download CV"
@@ -87,7 +87,7 @@ export function Header() {
             className="hidden rounded-xl bg-gradient-to-r from-primary to-secondary px-5 py-2.5 font-bold text-on-primary shadow-md shadow-primary/20 transition-all hover:opacity-90 active:scale-95 md:block"
           >
             Hire Me
-          </a>
+          </a> */}
           <button
             type="button"
             className="flex h-10 w-10 items-center justify-center rounded-xl border border-outline-variant/30 text-on-surface transition-all hover:border-primary/40 hover:text-primary md:hidden"

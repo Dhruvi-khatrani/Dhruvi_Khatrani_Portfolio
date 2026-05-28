@@ -28,7 +28,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   // Apply / remove the `dark` class on <html>
   useEffect(() => {
-    if (!mounted) return;
     const root = document.documentElement;
     if (theme === "dark") {
       root.classList.add("dark");
@@ -39,9 +38,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   }, [theme, mounted]);
 
   const toggle = () => setTheme((t) => (t === "light" ? "dark" : "light"));
-
-  // Avoid flash: render children only after mount
-  if (!mounted) return null;
 
   return (
     <ThemeContext.Provider value={{ theme, toggle }}>
