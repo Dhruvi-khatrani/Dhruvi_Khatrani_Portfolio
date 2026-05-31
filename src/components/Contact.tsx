@@ -98,7 +98,7 @@ export function Contact() {
 
       <div
         id="contact-card"
-        className="glass-card glass-card-shine relative overflow-hidden rounded-[40px] p-8 md:p-16"
+        className="glass-card glass-card-shine relative overflow-hidden rounded-[40px] p-5 md:p-16"
       >
         {/* Decorative blobs */}
         <div className="blob pointer-events-none absolute top-0 right-0 h-72 w-72 rounded-full bg-primary/10" />
@@ -117,7 +117,7 @@ export function Contact() {
             <div className="space-y-5">
               <a
                 href="mailto:dhruvikhatraniup@gmail.com"
-                className="group flex items-center gap-4 rounded-2xl border border-outline-variant/20 bg-surface-container-low p-4 transition-all hover:border-primary/40 hover:bg-surface-container"
+                className="group flex items-center gap-4 rounded-2xl border border-outline-variant/20 bg-surface-container-low p-2 md:p-4 transition-all hover:border-primary/40 hover:bg-surface-container"
               >
                 <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/15 transition-colors group-hover:bg-primary">
                   <Icon name="mail" className="text-primary group-hover:text-black" />

@@ -46,7 +46,7 @@ export function About() {
         {/* Right */}
         <div className="gs-right relative mt-8 md:mt-0">
           <div className="tilt-card glass-card glass-card-shine aspect-square overflow-hidden rounded-3xl p-1.5 sm:p-2">
-            <Image src={aboutImage} alt="Professional workspace" width={600} height={600} className="h-full w-full rounded-2xl object-cover" />
+            <Image src={aboutImage} alt="Dhruvi Khatrani — Full-Stack Developer" width={600} height={600} className="h-full w-full rounded-2xl object-cover" priority />
           </div>
           <div className="glass-card gs-scale absolute -bottom-5 -left-2 flex items-center gap-3 rounded-2xl p-3 sm:-bottom-6 sm:-left-4 sm:gap-4 sm:p-4 lg:p-5">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/20 sm:h-12 sm:w-12">
