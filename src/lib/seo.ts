@@ -35,12 +35,34 @@ export const siteConfig = {
   ],
 } as const;
 
+function normalizeSiteUrl(url: string): string {
+  const trimmed = url.trim().replace(/\/$/, "");
+  return /^https?:\/\//i.test(trimmed) ? trimmed : `https://${trimmed}`;
+}
+
+/**
+ * Site URL for canonical, Open Graph, and sitemap.
+ * On Vercel, VERCEL_URL is the per-deployment hostname (e.g. *-oil1a2lct.vercel.app),
+ * not your stable production domain — use NEXT_PUBLIC_SITE_URL or VERCEL_PROJECT_PRODUCTION_URL.
+ */
 export function getSiteUrl(): string {
-  if (process.env.NEXT_PUBLIC_SITE_URL) {
-    return process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, "");
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (explicit) {
+    return normalizeSiteUrl(explicit);
   }
-  if (process.env.VERCEL_URL) {
-    return `https://${process.env.VERCEL_URL}`;
+
+  const productionDomain = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
+  if (productionDomain) {
+    return normalizeSiteUrl(productionDomain);
   }
+
+  if (process.env.VERCEL_ENV === "production" && process.env.VERCEL_URL?.trim()) {
+    return normalizeSiteUrl(process.env.VERCEL_URL);
+  }
+
+  if (process.env.VERCEL_URL?.trim()) {
+    return normalizeSiteUrl(process.env.VERCEL_URL);
+  }
+
   return "http://localhost:3000";
 }
