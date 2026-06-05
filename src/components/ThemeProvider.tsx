@@ -15,13 +15,13 @@ const ThemeContext = createContext<ThemeContextValue>({
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>("dark");
   const [mounted, setMounted] = useState(false);
 
-  // On mount, read saved preference (default: light)
+  // On mount, read saved preference (default: dark)
   useEffect(() => {
     const saved = localStorage.getItem("portfolio-theme") as Theme | null;
-    const resolved: Theme = saved === "dark" ? "dark" : "light";
+    const resolved: Theme = saved === "light" ? "light" : "dark";
     setTheme(resolved);
     setMounted(true);
   }, []);

@@ -38,6 +38,7 @@ export default function OpenGraphImage() {
               width: "10px",
               height: "10px",
               borderRadius: "50%",
+              marginTop: "10px",
               background: "#5516be",
             }}
           />

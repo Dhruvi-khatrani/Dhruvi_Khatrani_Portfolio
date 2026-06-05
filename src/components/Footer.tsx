@@ -79,7 +79,7 @@ export function Footer() {
             </a>
             <a
               href="#contact"
-              className="mt-4 inline-flex items-center gap-2 rounded-xl bg-primary/10 border border-primary/20 px-4 py-2.5 text-sm font-bold text-primary transition-all hover:bg-primary/20"
+              className="mt-4 inline-flex items-center gap-2 rounded-xl bg-primary/10 border border-primary/25 px-4 py-2.5 text-sm font-bold text-primary transition-all hover:bg-primary/20"
             >
               <Icon name="send" className="text-sm" />
               Send a Message

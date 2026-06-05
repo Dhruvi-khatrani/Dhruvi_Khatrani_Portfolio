@@ -44,24 +44,28 @@ export function Header() {
       className="fixed top-0 right-0 left-0 z-50 h-20 border-b border-outline-variant/20 backdrop-blur-2xl"
     >
       <nav className="mx-auto flex h-full w-full max-w-[var(--spacing-container-max)] items-center justify-between px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)]">
-        {/* Logo */}
+        {/* Logo — only DK mark */}
         <a
           href="#hero"
-          className="group flex items-center gap-2 text-[length:var(--text-headline-md)] font-bold tracking-tighter text-on-surface transition-opacity hover:opacity-80"
+          className="group flex items-center gap-1.5 transition-opacity hover:opacity-80"
+          aria-label="Dhruvi Khatrani — Home"
         >
-          <span className="gradient-text">DK</span>
-          <span className="hidden sm:inline text-on-surface-variant font-normal text-lg">
-            · Dhruvi Khatrani
+          <span
+            className="gradient-text text-2xl font-semibold tracking-widest uppercase sm:text-3xl"
+            style={{ fontFamily: "var(--font-display)", letterSpacing: "0.12em" }}
+          >
+            DK
           </span>
         </a>
 
-        {/* Desktop nav */}
-        <div className="hidden items-center gap-[var(--spacing-stack-lg)] md:flex">
+        {/* Desktop nav — centered */}
+        <div className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="nav-link font-mono text-[length:var(--text-label-mono)] tracking-[var(--text-label-mono--letter-spacing)] text-on-surface-variant transition-colors duration-300 hover:text-on-surface"
+              className="nav-link text-[13px] tracking-[0.08em] text-on-surface-variant transition-colors duration-300 hover:text-on-surface"
+              style={{ fontWeight: 600 }}
             >
               {link.label}
             </a>
@@ -125,7 +129,7 @@ export function Header() {
               <a
                 href="#contact"
                 onClick={() => setMenuOpen(false)}
-                className="flex flex-1 items-center justify-center rounded-xl bg-gradient-to-r from-primary to-secondary py-3 font-bold text-on-primary"
+                className="flex flex-1 items-center justify-center rounded-xl bg-primary py-3 font-bold text-on-primary"
               >
                 Hire Me
               </a>

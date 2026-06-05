@@ -2,50 +2,93 @@ import { experience } from "@/lib/data";
 import { Icon } from "./Icon";
 
 export function Experience() {
+  const item = experience[0];
+
   return (
-    <section id="experience" className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-20 md:px-10 md:py-24 lg:px-[var(--spacing-margin-desktop)] lg:py-[var(--spacing-section-gap)]">
+    <section
+      id="experience"
+      className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-20 md:px-10 md:py-24 lg:px-[var(--spacing-margin-desktop)] lg:py-[var(--spacing-section-gap)]"
+    >
       <div className="pointer-events-none absolute inset-0 bg-surface-container-lowest" />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/3 via-transparent to-secondary/3" />
 
       <div className="relative mx-auto max-w-[var(--spacing-container-max)]">
+        {/* Section header */}
         <div className="mb-10 text-center sm:mb-12 lg:mb-16">
-          <div className="gs-up mb-3 inline-flex items-center gap-2 rounded-full border border-secondary/30 bg-secondary/8 px-3 py-1 font-mono text-[11px] tracking-[0.18em] text-secondary uppercase sm:px-4 sm:py-1.5 sm:text-[length:var(--text-label-mono)]">
-            <Icon name="timeline" className="text-xs sm:text-sm" />
-            Journey
+          <div className="gs-up mb-3 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/8 px-3 py-1 font-mono text-[11px] tracking-[0.18em] text-primary uppercase sm:px-4 sm:py-1.5 sm:text-[length:var(--text-label-mono)]">
+            {/* <Icon name="briefcase" className="text-xs sm:text-sm" /> */}
+            Work Experience
           </div>
           <h2 className="gs-fade text-[28px] font-bold leading-tight tracking-tight sm:text-[36px] lg:text-[length:var(--text-headline-lg)]">
-            Professional <span className="gradient-text">Odyssey</span>
+            Professional <span className="gradient-text">Background</span>
           </h2>
         </div>
 
-        <div className="relative mx-auto max-w-3xl">
-          {/* Timeline line */}
-          <div id="timeline-line" className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-primary/60 via-secondary/40 to-tertiary/20 md:left-1/2 md:-translate-x-px" />
+        {/* Single role — featured card layout */}
+        <div className="mx-auto max-w-4xl">
+          <div className="glass-card glass-card-shine rounded-3xl p-6 sm:p-10 lg:p-14">
+            <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-start lg:gap-16">
 
-          {experience.map((item, idx) => (
-            <div
-              key={item.title}
-              className={`timeline-item relative mb-10 flex gap-6 md:mb-14 md:gap-8 ${idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
-            >
-              <div className={`absolute left-4 top-1 z-10 h-3.5 w-3.5 -translate-x-1/2 rounded-full ring-4 ring-surface-container-low md:left-1/2 sm:h-4 sm:w-4 ${item.dotColor}`} />
-              <div className={`ml-8 w-full md:ml-0 md:w-[calc(50%-2rem)] sm:ml-10 ${idx % 2 === 0 ? "md:mr-auto md:pr-8" : "md:ml-auto md:pl-8"}`}>
-                <div className="glass-card glass-card-shine rounded-2xl p-4 transition-all hover:border-primary/30 hover:shadow-lg hover:shadow-primary/8 sm:p-6">
-                  <div className="mb-2 flex flex-col gap-1 sm:mb-3 sm:flex-row sm:items-center sm:justify-between">
-                    <h3 className="text-base font-bold text-on-surface sm:text-xl">{item.title}</h3>
-                    <span className={`font-mono text-[10px] tracking-wide sm:text-[length:var(--text-label-mono)] ${item.periodColor}`}>{item.period}</span>
+              {/* Left — role info */}
+              <div>
+                {/* Role title + period */}
+                <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                  <h3 className="text-[22px] font-extrabold tracking-tight text-on-surface sm:text-[28px] lg:text-[32px]">
+                    {item.title}
+                  </h3>
+                  {/* <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/8 px-3 py-1.5 font-mono text-[11px] tracking-wide text-primary sm:text-[length:var(--text-label-mono)]">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary animate-dot-pulse" />
+                    {item.period}
+                  </span> */}
+                </div>
+
+                {/* Divider */}
+                <div className="mb-6 h-px w-full bg-gradient-to-r from-on-surface/15 via-on-surface/6 to-transparent" />
+
+                {/* Description */}
+                <p className="mb-8 text-[15px] leading-relaxed text-on-surface-variant sm:text-base sm:leading-loose">
+                  {item.description}
+                </p>
+
+                {/* Tags */}
+                {item.tags.length > 0 && (
+                  <div className="flex flex-wrap gap-2">
+                    {item.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 font-mono text-[11px] tracking-wide text-primary sm:text-xs"
+                      >
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-                  <p className="mb-3 text-[13px] leading-relaxed text-on-surface-variant sm:mb-4 sm:text-base">{item.description}</p>
-                  {item.tags.length > 0 && (
-                    <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                      {item.tags.map((tag) => (
-                        <span key={tag} className="rounded-full bg-primary/10 border border-primary/20 px-2.5 py-0.5 text-[10px] font-mono text-primary sm:px-3 sm:py-1 sm:text-xs">{tag}</span>
-                      ))}
-                    </div>
-                  )}
+                )}
+              </div>
+
+              {/* Right — big stat */}
+              <div className="flex flex-row gap-4 lg:flex-col lg:items-end lg:gap-6">
+                {/* Years stat */}
+                <div className="soft-panel flex flex-1 flex-col items-center justify-center rounded-2xl p-5 text-center lg:w-36 lg:flex-none lg:p-6">
+                  <span className="mb-0.5 text-[36px] font-extrabold leading-none tracking-tight text-on-surface lg:text-[44px]">
+                    2.5<span className="text-[24px] lg:text-[28px]">+</span>
+                  </span>
+                  <span className="font-mono text-[10px] tracking-widest text-on-surface-variant uppercase sm:text-[11px]">
+                    Years
+                  </span>
+                </div>
+
+                {/* Status badge */}
+                <div className="soft-panel flex flex-1 flex-col items-center justify-center rounded-2xl p-5 text-center lg:w-36 lg:flex-none lg:p-6">
+                  <div className="mb-0.5 flex h-9 w-9 items-center justify-center rounded-full bg-primary/15">
+                    <Icon name="verified" className="text-base text-primary" filled />
+                  </div>
+                  <span className="font-mono text-[10px] tracking-widest text-on-surface-variant uppercase sm:text-[11px]">
+                    Available
+                  </span>
                 </div>
               </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

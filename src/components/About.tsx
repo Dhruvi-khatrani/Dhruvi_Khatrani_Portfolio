@@ -5,8 +5,8 @@ import { Icon } from "./Icon";
 const stats = [
   { counter: "2.5", suffix: "+", label: "Years Experience",   color: "text-primary" },
   { counter: "15",  suffix: "+", label: "Projects Delivered", color: "text-secondary" },
-  { counter: "100", suffix: "%", label: "Client Satisfaction",color: "text-tertiary" },
-  { counter: "8",   suffix: "+", label: "Technologies",       color: "text-primary" },
+  { counter: "100", suffix: "%", label: "Client Satisfaction",color: "text-primary" },
+  { counter: "8",   suffix: "+", label: "Technologies",       color: "text-secondary" },
 ];
 
 export function About() {
@@ -28,12 +28,25 @@ export function About() {
             With over <span className="font-bold text-primary">2.5 years of experience</span>, I specialize in engineering high-performance digital solutions. My expertise spans E-commerce ecosystems, LinkedIn-style networking platforms, sophisticated HRMS workflows, and real-time communication systems.
           </p>
           <p className="mb-8 text-[15px] leading-relaxed text-on-surface-variant sm:text-[length:var(--text-body-lg)] sm:leading-[var(--text-body-lg--line-height)]">
-            I care deeply about clean architecture, pixel-perfect UI, and delivering products that users love.
+            I care deeply about clean architecture, pixel-perfect UI, and products that feel effortless to use from the first click.
           </p>
+
+          <div className="mb-8 grid gap-3 sm:grid-cols-3">
+            {[
+              { title: "UI Craft", text: "Polished layouts, motion, and visual consistency." },
+              { title: "Scalable Code", text: "Reusable systems that grow with the product." },
+              { title: "Real Results", text: "Fast delivery, clear communication, and dependable builds." },
+            ].map((item) => (
+              <article key={item.title} className="soft-panel rounded-2xl p-4">
+                <h3 className="mb-1 text-sm font-semibold text-on-surface">{item.title}</h3>
+                <p className="text-[12px] leading-relaxed text-on-surface-variant">{item.text}</p>
+              </article>
+            ))}
+          </div>
 
           <div id="about-stats" className="gs-stagger grid grid-cols-2 gap-3 sm:gap-4">
             {stats.map(({ counter, suffix, label, color }) => (
-              <div key={label} className="tilt-card glass-card glass-card-shine rounded-2xl p-4 sm:p-5">
+              <div key={label} className="tilt-card glass-card glass-card-shine rounded-2xl p-4 shadow-sm transition-transform duration-300 hover:-translate-y-1 sm:p-5">
                 <div data-counter={counter} data-suffix={suffix} className={`counter-val mb-1 text-2xl font-extrabold sm:text-[length:var(--text-headline-md)] ${color}`}>
                   0{suffix}
                 </div>

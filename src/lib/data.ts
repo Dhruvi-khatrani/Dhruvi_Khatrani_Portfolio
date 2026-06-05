@@ -7,89 +7,122 @@ export const navLinks = [
 ] as const;
 
 export const skills = [
-  { icon: "html", label: "HTML5" },
-  { icon: "css", label: "CSS3/Tailwind" },
-  { icon: "javascript", label: "JavaScript ES6+" },
+  { icon: "html",     label: "HTML5" },
+  { icon: "css",      label: "CSS3/Tailwind" },
+  { icon: "javascript", label: "JavaScript" },
   { icon: "frame_person", label: "React.js" },
-  { icon: "bolt", label: "Next.js" },
-  { icon: "terminal", label: "Node.js" },
-  { icon: "hub", label: "Socket.IO" },
-  { icon: "api", label: "n8n / REST APIs" },
+  { icon: "bolt",     label: "Next.js" },
+  { icon: "animation", label: "GSAP" },
+] as const;
+
+export const backendSkills = [
+  { icon: "terminal",  label: "Node.js" },
+  { icon: "dns",       label: "Express.js" },
+  { icon: "api",       label: "REST APIs" },
+  { icon: "hub",       label: "Socket.IO" },
+  { icon: "database",  label: "MongoDB" },
+  { icon: "storage",   label: "PostgreSQL" },
 ] as const;
 
 export const experience = [
   {
     title: "Full Stack Developer",
-    period: "2022 - Present",
+    period: "2.5+ Years",
     description:
-      "Engineered scalable web architectures using modern stack components. Expert focus on performance optimization and real-time state management.",
-    tags: ["Scalability", "Performance", "Architecture"],
+      "Building scalable web applications with React.js, Next.js, and Node.js. Experienced with MongoDB, PostgreSQL, and modern full-stack architectures. Focused on creating performant, user-centric solutions across various industries.",
+    tags: ["React.js", "Next.js", "Node.js", "MongoDB", "PostgreSQL"],
     dotColor: "bg-primary ring-primary/20",
     periodColor: "text-primary",
-  },
-  {
-    title: "E-Commerce Specialist",
-    period: "Projects Focus",
-    description:
-      "Developed complex end-to-end commerce platforms with secure payment gateways, dynamic cart logic, and advanced admin dashboards.",
-    tags: [] as string[],
-    dotColor: "bg-secondary ring-secondary/20",
-    periodColor: "text-secondary",
-  },
-  {
-    title: "Enterprise Systems",
-    period: "HRMS & Job Platforms",
-    description:
-      "Built intricate LinkedIn-inspired job matching engines and attendance workflow management systems for corporate scale.",
-    tags: [] as string[],
-    dotColor: "bg-tertiary ring-tertiary/20",
-    periodColor: "text-tertiary",
   },
 ] as const;
 
 export const projects = [
   {
-    title: "Drzio Yoga Platform",
+    title: "Bitcorpen",
     description:
-      "Complete wellness ecosystem with session booking, live classes via WebRTC, and integrated progress tracking.",
-    tags: ["React.js", "Node.js"],
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDsBw9D6uxKbeO6Jj6GA9F2HmbuyQMoq7Ro7WY2JiX_2Grrvi703TX_0j__xg2iwQSO05S9JIlHonw2G6yNGar3T1kMz1v_EUk3Y2itloB9sNdtvJi7z3_-jSlOeshjkIRzsRZbA-MDJ8Pxt-OFzNdhq1GI0VXXFE-awnaTCmFriM3TA8JwfBB_DYKFXfDu-El4VJk_OQ5MUp3DJ6zQYDvC4SVeI0I3u7-ZcYZj4WSlPfNuUxUlBRF0uxV-flSmjT60BzVn2nKq0Jg",
+      "LinkedIn-style professional networking platform with a full-featured job board, real-time chat powered by Socket.IO, and a social feed supporting posts, comments, and reactions. Users can build profiles, connect with peers, apply to jobs, and collaborate — all in one place.",
+    tags: ["React.js", "Node.js", "Socket.IO", "MongoDB"],
+    image: "/bitcorpen.png",
     featured: true,
+    link: null,
+    highlights: ["Real-time Messaging", "Job Board", "Social Feed & Posts"],
   },
+  // {
+  //   title: "Odyssey System",
+  //   description:
+  //     "ClickUp-inspired project management suite with Upwork integration for real-time client communication. Manage projects, track tasks on Kanban boards, oversee sales pipelines, and handle client interactions — all in one unified workspace built for agencies.",
+  //   tags: ["React.js", "Next.js", "Node.js", "MongoDB"],
+  //   image: "/odyssey-placeholder.svg",
+  //   featured: false,
+  //   link: null,
+  //   highlights: ["Kanban Boards", "Upwork Integration", "Sales Pipeline"],
+  // },
   {
-    title: "Bitcorpen Chat",
-    description: "Socket.IO based social messenger with sub-second latency.",
-    tags: [] as string[],
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCkJMZ4Dt12GvzfdN3hhxaF-oHzsNJS_fcU53WltYZEAeNYS_-RZoxRIvfMxpoaw9_Azb4PrPAoqjCtkWN-zCyNZqoLRHJgi7AT-g2vExmgE1hH-4KzXoUMYY6GpO_P4N_lAFf_jvNR33ftYDW-cuVhovLtmJPN36CHZc2K8mhH0piV4_lFZ-JsPtqlic84DKrFwd5sFtQ21NhmY2btDXgqAVnNKJuo-w_B53KdPWHRgkWmMMQuOcTsNAWpe2GQBvqNP67bPUJOjl8",
+    title: "Keka HRMS",
+    description:
+      "Enterprise-grade HR management system covering the full employee lifecycle — payroll processing, attendance tracking, leave & penalty management, and auto-generated salary sheets. Also ships a built-in games hub (Color Collector, Knife Thrower, Connect Dots, Sword Ladder, Word Finder, Word Puzzle) to boost team engagement right inside the platform.",
+    tags: ["React.js", "Next.js", "Node.js", "MongoDB"],
+    image: "/keka.png",
     featured: false,
-    linkLabel: "Explore Case Study",
+    link: "https://shell.10turtle.com/",
+    highlights: ["Payroll & Salary Sheets", "Attendance & Leave Management", "Built-in Games Hub"],
+  },
+  // {
+  //   title: "Drzio Yoga",
+  //   description:
+  //     "End-to-end wellness platform with live class booking, WebRTC-powered sessions, instructor dashboards, subscription billing, and real-time progress tracking — designed to bring studio-quality yoga online.",
+  //   tags: ["React.js", "Node.js", "WebRTC"],
+  //   image:
+  //     "https://lh3.googleusercontent.com/aida-public/AB6AXuDsBw9D6uxKbeO6Jj6GA9F2HmbuyQMoq7Ro7WY2JiX_2Grrvi703TX_0j__xg2iwQSO05S9JIlHonw2G6yNGar3T1kMz1v_EUk3Y2itloB9sNdtvJi7z3_-jSlOeshjkIRzsRZbA-MDJ8Pxt-OFzNdhq1GI0VXXFE-awnaTCmFriM3TA8JwfBB_DYKFXfDu-El4VJk_OQ5MUp3DJ6zQYDvC4SVeI0I3u7-ZcYZj4WSlPfNuUxUlBRF0uxV-flSmjT60BzVn2nKq0Jg",
+  //   featured: false,
+  //   link: null,
+  //   highlights: ["Live Classes via WebRTC", "Session Booking", "Progress Tracking"],
+  // },
+  {
+    title: "Genevieve Caffrey",
+    description:
+      "Design-focused, pixel-perfect personal landing page for a creative professional. Built with meticulous attention to typography, whitespace, and visual hierarchy — fully mobile-responsive across all breakpoints with smooth scroll animations and a polished aesthetic.",
+    tags: ["React.js", "Tailwind CSS", "GSAP"],
+    // image:
+    //   "https://lh3.googleusercontent.com/aida-public/AB6AXuDsBw9D6uxKbeO6Jj6GA9F2HmbuyQMoq7Ro7WY2JiX_2Grrvi703TX_0j__xg2iwQSO05S9JIlHonw2G6yNGar3T1kMz1v_EUk3Y2itloB9sNdtvJi7z3_-jSlOeshjkIRzsRZbA-MDJ8Pxt-OFzNdhq1GI0VXXFE-awnaTCmFriM3TA8JwfBB_DYKFXfDu-El4VJk_OQ5MUp3DJ6zQYDvC4SVeI0I3u7-ZcYZj4WSlPfNuUxUlBRF0uxV-flSmjT60BzVn2nKq0Jg",
+    image: "/geneive.png",
+    featured: false,
+    link: null,
+    highlights: ["Pixel-perfect Layout", "Mobile-responsive Design", "Scroll Animations"],
   },
   {
     title: "Alexis Jewelry",
     description:
-      "Premium E-commerce experience with interactive 3D product viewing.",
-    tags: [] as string[],
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuD-JB9xTdbDmWwUGZ0zmDgkY8tGVz6psPPkR4Jo31p7ftH9WOy9uhBsX2bhchAZTSf3a9Sq-O0iF6KLFK4mq7AZqRGbXoenoHum1qnipzv2qZL0xzd6dQ4xx9eM_pxEhB9by7P8BClBOmexbz8rh5JPI4uVa-kk1Uy9-q90Y2GHH6UPMSrl3VzHAoiQfnWu13nTgwen9tjOY9Um-ty5pbZcKJ4altvRslL0r2xWwdHMKLvA7fnrWav6MYpiF-sBzue6SsJfBQha0ig",
+      "Premium jewellery e-commerce platform with product catalog, advanced filtering, wishlist, cart & checkout, secure payments, order tracking, and an admin dashboard — built for a high-end brand experience.",
+    tags: ["React.js", "Node.js", "MongoDB"],
+    // image:
+    //   "https://lh3.googleusercontent.com/aida-public/AB6AXuD-JB9xTdbDmWwUGZ0zmDgkY8tGVz6psPPkR4Jo31p7ftH9WOy9uhBsX2bhchAZTSf3a9Sq-O0iF6KLFK4mq7AZqRGbXoenoHum1qnipzv2qZL0xzd6dQ4xx9eM_pxEhB9by7P8BClBOmexbz8rh5JPI4uVa-kk1Uy9-q90Y2GHH6UPMSrl3VzHAoiQfnWu13nTgwen9tjOY9Um-ty5pbZcKJ4altvRslL0r2xWwdHMKLvA7fnrWav6MYpiF-sBzue6SsJfBQha0ig",
+    image: "/alexis.png",
     featured: false,
+    link: null,
+    highlights: ["Cart & Checkout", "Order Tracking", "Admin Dashboard"],
   },
   {
     title: "Pet Insurance",
-    description: "High-conversion landing page with complex form logic.",
-    tags: [] as string[],
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuB13xrDUQPFGPc-lckC7Kh_4ySUPE6GS4xA-O-KNfpe7LIt9b97aG034LAvbRYdAQjoJpKINjmhK1wlMIWtZKwvLh2khFaMT_Wdqcl4UNb5bKm0j368P3_dLmbUW6WNkgm2g600ChTx3qQrK4Hj3HZ7ZCYrWz3ab4fgEiPL_ioEhRDVC6rpneGbOG44BDULPzTMG2qayGbhKgS9PHrKaWdXWYiUS7mTspjfmx0z5-za7Ar-hH2uWU0P0MmMzusVQ6STQfG6cJDP5EU",
+    description:
+      "Pixel-perfect, mobile-first pet insurance comparison landing page. Features provider rating cards (Lemonade, Healthy Paws, ASPCA), multi-step quote form, dynamic plan comparison table, trust signals, and high-conversion CTAs — built from Figma to production.",
+    tags: ["React.js", "Tailwind CSS", "GSAP"],
+    image: "/petinsurance.png",
     featured: false,
+    link: "https://johnchanthana.zooq.app/",
+    highlights: ["Provider Rating Cards", "Plan Comparison Table", "Multi-step Quote Form"],
   },
   {
     title: "Voise AI",
-    description: "Generative AI interface for real-time voice synthesis.",
-    tags: [] as string[],
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuA4640erlrG1loRMJR64Y1z05hG99sPyr0YAF8Srrj2DC2Mg9sPaGgYTtspl6av1XeQGW997hZf9UJEjZYG6ZgHBoKmooOM9ZbItYIEF0UxkNKQnjlOlRQnamtZfspnRKOG914JkZwwyvhBzmp-c4bAxmoxApFICRdA-yhRR_3qJuHDEW7dmSOUJpyhPIIUnJsExrN5FDXQKu9PB2iiYz24Dqi7qkbzeKjIVGPzc7r3wS_IJ0RfDhT-lVzd_WpK5ha_9uS-VX01K-s",
+    description:
+      "AI voice synthesis interface with real-time text-to-speech, 600+ voice options across multiple languages, voice cloning, emotional tone control, and instant audio export — built for creators, narrators, and developers.",
+    tags: ["React.js", "Next.js", "AI/ML APIs"],
+    // image:
+    //   "https://lh3.googleusercontent.com/aida-public/AB6AXuA4640erlrG1loRMJR64Y1z05hG99sPyr0YAF8Srrj2DC2Mg9sPaGgYTtspl6av1XeQGW997hZf9UJEjZYG6ZgHBoKmooOM9ZbItYIEF0UxkNKQnjlOlRQnamtZfspnRKOG914JkZwwyvhBzmp-c4bAxmoxApFICRdA-yhRR_3qJuHDEW7dmSOUJpyhPIIUnJsExrN5FDXQKu9PB2iiYz24Dqi7qkbzeKjIVGPzc7r3wS_IJ0RfDhT-lVzd_WpK5ha_9uS-VX01K-s",
+    image: "/voiseai.png",
     featured: false,
+    link: "https://voise.ai/",
+    highlights: ["600+ AI Voices", "Voice Cloning", "Real-time TTS"],
   },
 ] as const;
 
@@ -100,16 +133,26 @@ export const chatFeatures = [
 ] as const;
 
 export const automationItems = [
-  { icon: "webhook", label: "Webhooks", color: "text-primary border-primary/40" },
+  {
+    icon: "cable",
+    label: "Webhooks",
+    desc: "Trigger workflows instantly from any external event or HTTP endpoint.",
+    color: "text-primary border-primary/35",
+    bg: "bg-primary/10",
+  },
   {
     icon: "settings_input_component",
     label: "n8n Flows",
-    color: "text-secondary border-secondary/40",
+    desc: "Visual no-code pipelines connecting APIs, databases, and services.",
+    color: "text-secondary border-secondary/35",
+    bg: "bg-secondary/10",
   },
   {
-    icon: "database",
+    icon: "account_tree",
     label: "API Pipelines",
-    color: "text-tertiary border-tertiary/40",
+    desc: "Custom REST orchestration layers that move data where it needs to go.",
+    color: "text-tertiary border-tertiary/35",
+    bg: "bg-tertiary/10",
   },
 ] as const;
 

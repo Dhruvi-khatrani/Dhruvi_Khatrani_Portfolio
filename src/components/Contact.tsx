@@ -83,7 +83,7 @@ export function Contact() {
 
       {/* Section header */}
       <div className="mb-16 text-center">
-        <div className="contact-label mb-4 inline-block rounded-full border border-primary/30 px-4 py-1.5 font-mono text-[length:var(--text-label-mono)] tracking-[0.2em] text-primary uppercase">
+        <div className="contact-label mb-4 inline-block rounded-full border border-primary/30 bg-primary/8 px-4 py-1.5 font-mono text-[length:var(--text-label-mono)] tracking-[0.2em] text-primary uppercase">
           Get In Touch
         </div>
         <h2 className="contact-heading mb-4 text-[length:var(--text-headline-lg)] leading-[var(--text-headline-lg--line-height)] font-bold tracking-[var(--text-headline-lg--letter-spacing)]">
@@ -120,7 +120,7 @@ export function Contact() {
                 className="group flex items-center gap-4 rounded-2xl border border-outline-variant/20 bg-surface-container-low p-2 md:p-4 transition-all hover:border-primary/40 hover:bg-surface-container"
               >
                 <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/15 transition-colors group-hover:bg-primary">
-                  <Icon name="mail" className="text-primary group-hover:text-black" />
+                  <Icon name="mail" className="text-primary group-hover:text-on-primary" />
                 </div>
                 <div>
                   <div className="font-mono text-xs tracking-widest text-on-surface-variant uppercase mb-0.5">
@@ -199,7 +199,7 @@ export function Contact() {
                   htmlFor="contact-first-name"
                   className="px-1 font-mono text-[length:var(--text-label-mono)] tracking-[var(--text-label-mono--letter-spacing)] text-on-surface-variant"
                 >
-                  NAME <span className="text-primary">*</span>
+                  NAME <span className="text-on-surface">*</span>
                 </label>
                 <input
                   id="contact-first-name"
@@ -225,7 +225,7 @@ export function Contact() {
                   htmlFor="contact-email"
                   className="px-1 font-mono text-[length:var(--text-label-mono)] tracking-[var(--text-label-mono--letter-spacing)] text-on-surface-variant"
                 >
-                  EMAIL <span className="text-primary">*</span>
+                  EMAIL <span className="text-on-surface">*</span>
                 </label>
                 <input
                   id="contact-email"
@@ -254,7 +254,7 @@ export function Contact() {
                 htmlFor="contact-message"
                 className="px-1 font-mono text-[length:var(--text-label-mono)] tracking-[var(--text-label-mono--letter-spacing)] text-on-surface-variant"
               >
-                MESSAGE <span className="text-primary">*</span>
+                MESSAGE <span className="text-on-surface">*</span>
               </label>
               <textarea
                 id="contact-message"
@@ -279,7 +279,7 @@ export function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="magnetic-effect glow-button flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary to-secondary py-4 font-bold text-on-primary shadow-lg shadow-primary/20 transition-all hover:opacity-90 active:scale-95 disabled:cursor-not-allowed disabled:opacity-70"
+                className="magnetic-effect glow-button flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-4 font-bold text-on-primary shadow-lg shadow-primary/25 transition-all hover:opacity-90 active:scale-95 disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {isSubmitting ? (
                   <>
@@ -295,7 +295,7 @@ export function Contact() {
               </button>
               <a
                 href="mailto:dhruvikhatraniup@gmail.com"
-                className="flex w-full items-center justify-center gap-2 rounded-xl border border-outline-variant/30 bg-surface-container-low py-4 font-bold text-on-surface transition-all hover:border-primary/50 hover:text-primary"
+                className="flex w-full items-center justify-center gap-2 rounded-xl border border-primary/30 bg-primary/8 py-4 font-bold text-primary transition-all hover:border-primary/60 hover:bg-primary/14"
               >
                 <Icon name="mail" className="text-base" />
                 Open Email

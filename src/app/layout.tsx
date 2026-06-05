@@ -1,17 +1,26 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Jost, JetBrains_Mono } from "next/font/google";
 import { JsonLd } from "@/components/JsonLd";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { CursorGlow } from "@/components/CursorGlow";
 import { getSiteUrl, siteConfig } from "@/lib/seo";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+/* ── Hero name font ─────────────────────────────────────────────────────── */
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-display",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["600"],
 });
 
+/* ── Body / UI font ─────────────────────────────────────────────────────── */
+const jost = Jost({
+  variable: "--font-inter",   // keeps existing CSS var name so all components still work
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+/* ── Mono font ──────────────────────────────────────────────────────────── */
 const jetbrains = JetBrains_Mono({
   variable: "--font-jetbrains",
   subsets: ["latin"],
@@ -73,7 +82,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&display=swap"
@@ -83,7 +92,7 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className={`${inter.variable} ${jetbrains.variable} min-h-screen font-sans text-[length:var(--text-body-md)] leading-[var(--text-body-md--line-height)] antialiased`}
+        className={`${bricolage.variable} ${jost.variable} ${jetbrains.variable} min-h-screen font-sans text-[length:var(--text-body-md)] leading-[var(--text-body-md--line-height)] antialiased`}
       >
         {/* CursorGlow is OUTSIDE ThemeProvider so it mounts immediately,
             not blocked by ThemeProvider's null-until-mounted gate */}
