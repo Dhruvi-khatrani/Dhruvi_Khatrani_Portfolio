@@ -52,10 +52,11 @@ export function Header() {
         >
           <span
             className="gradient-text text-2xl font-semibold tracking-widest uppercase sm:text-3xl"
-            style={{ fontFamily: "var(--font-display)", letterSpacing: "0.12em" }}
+            style={{ fontFamily: "var(--font-display)", letterSpacing: "0em" }}
           >
             DK
           </span>
+          {/* <img src="/logo.png" alt="" width={30} height={30}/> */}
         </a>
 
         {/* Desktop nav — centered */}
