@@ -78,17 +78,25 @@ export const projects = [
   //   link: null,
   //   highlights: ["Live Classes via WebRTC", "Session Booking", "Progress Tracking"],
   // },
+  // {
+  //   title: "Genevieve Caffrey",
+  //   description:
+  //     "Design-focused, pixel-perfect personal landing page for a creative professional. Built with meticulous attention to typography, whitespace, and visual hierarchy — fully mobile-responsive across all breakpoints with smooth scroll animations and a polished aesthetic.",
+  //   tags: ["React.js", "Tailwind CSS", "GSAP"],
+  //   image: "/geneive.png",
+  //   featured: false,
+  //   link: null,
+  //   highlights: ["Pixel-perfect Layout", "Mobile-responsive Design", "Scroll Animations"],
+  // },
   {
-    title: "Genevieve Caffrey",
+    title: "Matchly",
     description:
-      "Design-focused, pixel-perfect personal landing page for a creative professional. Built with meticulous attention to typography, whitespace, and visual hierarchy — fully mobile-responsive across all breakpoints with smooth scroll animations and a polished aesthetic.",
-    tags: ["React.js", "Tailwind CSS", "GSAP"],
-    // image:
-    //   "https://lh3.googleusercontent.com/aida-public/AB6AXuDsBw9D6uxKbeO6Jj6GA9F2HmbuyQMoq7Ro7WY2JiX_2Grrvi703TX_0j__xg2iwQSO05S9JIlHonw2G6yNGar3T1kMz1v_EUk3Y2itloB9sNdtvJi7z3_-jSlOeshjkIRzsRZbA-MDJ8Pxt-OFzNdhq1GI0VXXFE-awnaTCmFriM3TA8JwfBB_DYKFXfDu-El4VJk_OQ5MUp3DJ6zQYDvC4SVeI0I3u7-ZcYZj4WSlPfNuUxUlBRF0uxV-flSmjT60BzVn2nKq0Jg",
-    image: "/geneive.png",
+      "AI-powered job board platform where employers post jobs and candidates apply with smart matching. Features skill-based, location-based & experience filtering, min/max salary controls, and a full admin panel to oversee matches. Candidates can also review employers — building trust on both sides of the hire.",
+    tags: ["React.js", "Next.js", "Node.js", "MongoDB"],
+    image: "/matchly.png",
     featured: false,
-    link: null,
-    highlights: ["Pixel-perfect Layout", "Mobile-responsive Design", "Scroll Animations"],
+    link: "https://matchly.zooq.app/",
+    highlights: ["Smart Job Matching", "Admin Panel & Controls", "Candidate Reviews Employers"],
   },
   {
     title: "Alexis Jewelry",
