@@ -129,28 +129,34 @@ export function PortfolioAnimations() {
 
     /* ── 7. Skill cards stagger ─────────────────────────────────────────── */
     gsap.from(".skill-card", {
-      scrollTrigger: { trigger: "#skills", start: "top 78%", once: true },
-      y: 50, opacity: 0, scale: 0.88,
+      scrollTrigger: { trigger: "#skills", start: "top 85%", once: true },
+      y: 40, opacity: 0, scale: 0.9,
       stagger: { each: 0.07, grid: "auto", from: "start" },
-      duration: 0.7, ease: "back.out(1.6)",
+      duration: 0.65, ease: "power3.out",
+      immediateRender: false, clearProps: "all",
     });
 
     /* ── 8. Project cards ───────────────────────────────────────────────── */
     gsap.from(".project-card", {
-      scrollTrigger: { trigger: "#projects", start: "top 78%", once: true },
-      y: 60, opacity: 0, scale: 0.94, stagger: 0.1, duration: 0.9, ease: "power3.out",
+      scrollTrigger: { trigger: "#projects", start: "top 85%", once: true },
+      y: 50, opacity: 0, scale: 0.95, stagger: 0.09, duration: 0.8,
+      ease: "power3.out", immediateRender: false, clearProps: "all",
     });
 
     /* ── 9. Chat bubbles ────────────────────────────────────────────────── */
     gsap.from(".chat-bubble", {
-      scrollTrigger: { trigger: "#chat-demo", start: "top 80%", once: true },
-      y: 25, opacity: 0, scale: 0.88, stagger: 0.3, duration: 0.7, ease: "back.out(1.5)",
+      scrollTrigger: { trigger: "#chat-demo", start: "top 88%", once: true },
+      y: 20, opacity: 0, scale: 0.9, stagger: 0.25, duration: 0.6,
+      ease: "power3.out", immediateRender: false, clearProps: "all",
     });
 
     /* ── 10. Automation cards ───────────────────────────────────────────── */
     gsap.from(".auto-card", {
-      scrollTrigger: { trigger: "#automation", start: "top 82%", once: true },
-      y: 40, opacity: 0, rotation: -4, stagger: 0.15, duration: 0.8, ease: "back.out(1.6)",
+      scrollTrigger: { trigger: "#automation", start: "top 90%", once: true },
+      y: 30, opacity: 0, stagger: 0.12, duration: 0.7,
+      ease: "power3.out",
+      immediateRender: false,
+      clearProps: "all",
     });
 
     /* ── 11. Contact section ────────────────────────────────────────────── */

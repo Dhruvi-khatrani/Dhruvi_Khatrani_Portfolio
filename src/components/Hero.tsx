@@ -68,18 +68,16 @@ export function Hero() {
       id="hero"
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 py-20 sm:px-6 md:px-10 lg:px-[var(--spacing-margin-desktop)]"
     >
-      {/* Neon orbital rings — desktop only */}
-      <div className="pointer-events-none absolute inset-0 hidden lg:flex items-center justify-center" aria-hidden>
-        <div className="relative h-[520px] w-[520px]">
-          <div className="absolute inset-0 rounded-full border border-primary/15 animate-ring-pulse" />
-          <div className="absolute inset-10 rounded-full border border-secondary/10 animate-ring-pulse" style={{ animationDelay: "1.5s" }} />
-          <div className="absolute inset-20 rounded-full border border-primary/8 animate-ring-pulse" style={{ animationDelay: "0.8s" }} />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div style={{ animation: "orbitSpin 8s linear infinite" }} className="h-2.5 w-2.5 rounded-full bg-primary shadow-[0_0_10px_rgba(0,180,216,0.9)]" />
-          </div>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div style={{ animation: "orbitSpin 13s linear infinite reverse" }} className="h-2 w-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(72,202,228,0.8)]" />
-          </div>
+      {/* Subtle background rings — desktop only */}
+      <div className="pointer-events-none absolute inset-0 hidden lg:block" aria-hidden>
+        <div className="absolute -right-32 -top-32 h-[380px] w-[380px] rounded-full border border-primary/6 animate-ring-pulse" />
+        <div className="absolute -right-16 -top-16 h-[240px] w-[240px] rounded-full border border-secondary/4 animate-ring-pulse" style={{ animationDelay: "1.5s" }} />
+        <div className="absolute -left-24 bottom-24 h-[260px] w-[260px] rounded-full border border-primary/5 animate-ring-pulse" style={{ animationDelay: "0.8s" }} />
+        <div className="absolute -right-32 -top-32 flex h-[380px] w-[380px] items-center justify-center">
+          <div
+            style={{ animation: "orbitSpin 12s linear infinite" }}
+            className="h-1.5 w-1.5 rounded-full bg-primary/60 shadow-[0_0_6px_rgba(0,180,216,0.6)]"
+          />
         </div>
       </div>
 
